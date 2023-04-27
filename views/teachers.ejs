@@ -1,0 +1,74 @@
+<!-- views/students.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rao Tutorials</title>
+  <link rel="icon" type="image/png" href="/RT logo.png"/>
+  <style>
+    body{
+      font-family: Verdana, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    #searchbar{
+     margin-left: 34%;
+     padding:15px;
+    }
+
+    input[type=text] {
+      width: 30%;
+    }
+
+    h2 {
+      margin-left: 600px; 
+      font-size: x-small;
+    }
+  </style>
+</head>
+<body>
+  <img src="/RT logo.png" class="logo" alt="Logo" width="100px">
+  <h1>Search Teacher Data</h1>
+  <form id="search" action="/TeacherSearch">
+    <input id="searchbar"  type="text" name="search" placeholder="Search Teachers...">
+  </form>  
+  <h2>* Use Teacher Code, Teacher Name or Subject Name</h2>
+  <h1>Teacher Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Teacher ID</th>
+        <th>Full Name</th>
+        <th>Subject Name</th>
+        <th>Contact Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% teachers.forEach(teacher => { %>
+        <tr>
+          <td><%= teacher.teachercode %></td>
+          <td><%= teacher.fullname %></td>
+          <td><%= teacher.subname %></td>
+          <td><%= teacher.contact %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

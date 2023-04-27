@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./addExamSchedule.css">
+    <title>Rao Tutorials</title>
+    <link rel="icon" type="image/png" href="/RT logo.png"/>
+</head>
+<body>
+  <img src="/RT logo.png" class="logo" alt="Logo" width="100px">
+  <h2 class="title"><b>Add Exam Schedule</b></h2>
+  <div class="container">
+    <form id="examschedule" action="/examschedule" method="post">
+      <label for="batch">Batch Number</label>
+      <br>
+      <input type="text" id="batchnum" name="batch" placeholder="Enter Batch Number" required>
+      <br>
+      <label for="subject">Subject</label>
+      <br>
+      <input type="text" id="subname" name="subname" placeholder="Enter Subject" required>
+      <br>
+      <label for="date">Date</label>
+      <br>
+      <input type="date" id="date" name="date" placeholder="Enter Date" required>
+      <br>
+      <label for="time">From</label>
+      <br>
+      <input type="time" id="fromtime" name="fromtime" placeholder="From" required>
+      <br>
+      <label for="time">To</label>
+      <br>
+      <input type="time" id="totime" name="totime" placeholder="To" required>
+      <br>
+      <input type="submit" value="Submit" class="button">
+    </form> 
+  </div>
+</body>
+</html>

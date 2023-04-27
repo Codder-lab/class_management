@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rao Tutorials</title>
+        <link rel="icon" type="image/png" href="/RT logo.png"/>
+        <style> 
+
+          .container {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Verdana, sans-serif;
+          }
+            
+          input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+          }
+
+          h2 {
+            text-align: center;
+            font-family: Verdana, sans-serif;
+          }
+
+          /* General button style */
+          .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+
+          .signin {
+            margin: 130px;
+          }
+
+          a {
+            font-size: smaller;
+          }
+
+          .register {
+            font-size: small;
+            font-weight: normal;
+            text-align: center;
+          }
+        </style>
+    </head>
+    
+    <body>
+        <img src="/RT logo.png" class="logo" alt="Logo" width="100px">
+        <!--Admin Login-->
+        <div class="container">
+          <h2 class="title"><b>Admin Login</b></h2>
+          <form id="adminLogin" method="post" action="/adminlogin">
+            <label for="adminUsername">Username:</label>
+            <input type="text" id="adminUsername" name="username1" placeholder="Enter Username" required>
+            <br>
+            <label for="adminPassword">Password:</label>
+            <input type="password" id="adminPassword" name="password1" placeholder="Enter Password" required>
+            <br><br>
+            <input type="submit" value="Login" class="button">
+          </form> 
+        </div>
+        <br>
+        <br>
+
+        <!--Student Login -->
+
+        <div class="container">
+          <h2 class="title"><b>Student Login</b></h2>
+          <form id="studentLogin" action="/studentlogin" method="post">
+            <label for="studentUsername">Username:</label>
+            <input type="text" id="studentUsername" name="username2" placeholder="Enter Username" required>
+            <br>
+            <label for="studentPassword">Password:</label>
+            <input type="password" id="studentPassword" name="password2" placeholder="Enter Password" required>
+            <br><br>
+            <input type="submit" value="Login" class="button">
+            <br>
+            <h2 class="register">Don't have a student account?</h3>
+            <a href="/Signin" class="signin">SignIn</a>
+          </form> 
+        </div>
+    </body>
+</html>

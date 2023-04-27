@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rao Tutorials</title>
+  <link rel="icon" type="image/png" href="/RT logo.png"/>
+  <style>
+    body{
+      font-family: Verdana, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    #searchbar{
+      margin-left: 34%;
+      padding:15px;
+    }
+
+    input[type=text] {
+      width: 30%;
+    }
+
+    h2 {
+      margin-left: 650px; 
+      font-size: x-small;
+    }
+  </style>
+</head>
+<body>
+  <img src="/RT logo.png" class="logo" alt="Logo" width="100px">
+  <h1>Search Timetable Data</h1>
+  <form id="search" action="/TimetableSearch">
+    <input id="searchbar"  type="text" name="search" placeholder="Search Exams...">
+  </form>
+  <h2>* Use Subject Name or Lecture Date</h2>
+  <h1>Time table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Batch</th>
+        <th>Subject Name</th>
+        <th>Teacher Id</th>
+        <th>Date</th>
+        <th>From</th>
+        <th>To</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% timetables.forEach(timetable => { %>
+            <tr>
+              <td><%= timetable.batch %></td>
+              <td><%= timetable.subname %></td>
+              <td><%= timetable.teachercode %></td>
+              <td><%= timetable.date %></td>
+              <td><%= timetable.fromtime %></td>
+              <td><%= timetable.totime %></td>
+            </tr>
+          <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
