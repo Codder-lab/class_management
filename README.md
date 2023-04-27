@@ -15,4 +15,4 @@ npm run test
 
 This are some screenshots of the project - 
 
-(https://user-images.githubusercontent.com/84835929/234787263-b9e5f4fe-f5ce-4e50-bcff-36c2350e60ad.png)
+https://user-images.githubusercontent.com/84835929/234788249-1f609ed0-0162-4a63-bbf5-8a848680f2fc.png
