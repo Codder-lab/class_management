@@ -12,3 +12,7 @@ npm install
 Then, run the project using - 
 
 npm run test
+
+This are some screenshots of the project - 
+
+(https://user-images.githubusercontent.com/84835929/234787263-b9e5f4fe-f5ce-4e50-bcff-36c2350e60ad.png)
